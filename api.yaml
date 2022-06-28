@@ -1,0 +1,83 @@
+languageType: PYTHON3
+playBookVersion: 1.0.0
+appId: f14ebb301580404aa7e6733379043700
+appVersion: 1.0.0
+appName: WeChat
+appAlias: 微信
+description: 微信
+brief: 微信，为智能终端提供即时通讯服务的免费应用程序
+tags:
+  - WECHAT
+categories:
+  name: 消息通知
+contactInfo:
+  name: "ABT 安博通"
+  url: http://www.abtnetworks.com/welcome.html
+  email: "XXX@sapling.com.cn"
+  phone: XXXXX
+  description: XXXXXXXXXXXX
+licenseInfo:
+  name: 授权信息
+  url: https://XXXXX/LICENSE.md
+instanceEnabled: true
+setting:
+  parameters:
+    - name: appID
+      description: "第三方用户唯一凭证"
+      example: "wx3a3c7192476752f8"
+      value: ""
+      required: true
+      schema:
+        type: STRING
+      ui:
+        type: text
+        uiName: "第三方用户唯一凭证"
+    - name: appsecret
+      description: "第三方用户唯一凭证密钥"
+      example: "20e73b13b5393bbe7cbd5302f024c0e9"
+      value: ""
+      required: true
+      schema:
+        type: STRING
+      ui:
+        type: text
+        uiName: "第三方用户唯一凭证密钥"
+actions:
+  - name: TEXT
+    alias: 本文消息推送
+    description: 微信公众号推送本文消息
+    parameters:
+      - name: msgtype
+        alias: 消息类型
+        value: "text"
+        description: "消息类型,此时固定text"
+        example: "text"
+        required: true
+        schema:
+          type: STRING
+        ui:
+          type: text
+          uiName: "消息类型"
+      - name: content
+        alias: 消息内容
+        value: ""
+        description: "发送消息的内容"
+        example: "内容"
+        required: true
+        schema:
+          type: STRING
+        ui:
+          type: textarea
+          uiName: "消息内容"
+    returns:
+      schema:
+        type: STRING
+      example: "send success"
+      description: 微信公众号推送本文消息结果
+      views:
+        - type: STRING
+          single:
+            syntax: "${{data}}"
+image:
+  smallIcon:
+  largeImage: data:image/jpg;base64,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
